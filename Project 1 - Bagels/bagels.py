@@ -7,7 +7,7 @@ Tags: short, game, puzzle"""
 
 import random
 
-NUM_DIGITS = 3
+NUM_DIGITS = 1
 MAX_GUESSES = 10
 
 def main():
@@ -75,10 +75,10 @@ def getClues(guess, secretNum):
 	for i in range(len(guess)):
 		if guess[i] == secretNum[i]:
 			# a correct digit is in place
-			clues.append('Fermi')
+			clues.append('Fermi ')
 		elif guess[i] in secretNum:
 			# a correct digit in the incorrect place
-			clues.append('Pico')
+			clues.append('Pico ')
 	if len(clues) == 0:
 		return 'Bagels'
 
